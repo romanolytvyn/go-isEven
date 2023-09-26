@@ -2,6 +2,23 @@ package main
 
 import "testing"
 
+func TestIsEven(t *testing.T) {
+	if isEven(0) != true {
+		t.Errorf("Expected to be true for number 0, got %v", isEven(0))
+	}
+
+	if isEven(100) != true {
+		t.Errorf("Expected to be true for number 100, got %v", isEven(100))
+	}
+
+	if isEven(1) != false {
+		t.Errorf("Expected to be false for number 1, got %v", isEven(1))
+	}
+
+	if isEven(99) != false {
+		t.Errorf("Expected to be false for number 99, got %v", isEven(99))
+	}
+}
 func Test_isEven(t *testing.T) {
 	type args struct {
 		num int
